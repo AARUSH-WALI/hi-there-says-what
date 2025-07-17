@@ -318,7 +318,7 @@ const Dashboard = () => {
                       style={{ animationDelay: `${index * 150}ms` }}
                       onClick={() => handleRecipeClick(recipe)}
                     >
-                      <div className="relative aspect-[4/3] overflow-hidden">
+                      <div className="relative aspect-[4/3] overflow-hidden h-48">
                         <img
                           src={recipe.image}
                           alt={recipe.title}
@@ -363,7 +363,7 @@ const Dashboard = () => {
                       className="group bg-gradient-to-br from-background/95 to-background/80 backdrop-blur-md rounded-3xl overflow-hidden shadow-glow border border-border/20 hover:shadow-warm hover:border-primary/30 transition-all duration-700 hover:scale-[1.03] cursor-pointer animate-slide-in"
                       style={{ animationDelay: `${index * 150}ms` }}
                     >
-                      <div className="relative aspect-[4/3] overflow-hidden">
+                      <div className="relative aspect-[4/3] overflow-hidden h-48">
                         <img
                           src={beverage.image}
                           alt={beverage.title}

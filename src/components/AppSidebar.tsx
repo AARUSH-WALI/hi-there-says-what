@@ -20,16 +20,16 @@ export function AppSidebar() {
 
   const mainMenuItems = [
     {
-      title: "Dashboard",
-      icon: Home,
-      action: () => navigate("/dashboard"),
-      variant: "outline" as const
-    },
-    {
       title: "New Chat",
       icon: MessageSquare,
       action: () => navigate("/chat"),
       variant: "hero" as const
+    },
+    {
+      title: "Dashboard",
+      icon: Home,
+      action: () => navigate("/dashboard"),
+      variant: "outline" as const
     }
   ];
 
@@ -65,7 +65,7 @@ export function AppSidebar() {
     >
       <SidebarContent className="px-3 py-4">
         {/* Main Menu Buttons */}
-        <div className="mb-6 space-y-3">
+        <div className="mb-6 space-y-3 mt-4">
           {mainMenuItems.map((item, index) => (
             <Button
               key={item.title}
