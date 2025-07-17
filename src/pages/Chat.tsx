@@ -10,6 +10,7 @@ import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { Settings, LogOut, Sun, Moon, Menu, Send, Mic, MicOff, Sparkles, ChefHat, Coffee } from "lucide-react";
 import cooksyLogo from "@/assets/cooksy-logo.png";
 import { AppSidebar } from "@/components/AppSidebar";
+import { API_CONFIG } from "@/config/api";
 
 interface Message {
   id: string;
@@ -97,7 +98,7 @@ const Chat = () => {
 
   const getGeminiResponse = async (userMessage: string): Promise<string> => {
     try {
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyAm_YRy8fPqM9A3NJmSLgFqrr3FVQzVGkY`, {
+      const response = await fetch(`${API_CONFIG.GEMINI_API_URL}?key=${API_CONFIG.GEMINI_API_KEY}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

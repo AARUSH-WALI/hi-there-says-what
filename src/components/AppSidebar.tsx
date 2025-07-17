@@ -71,11 +71,11 @@ export function AppSidebar() {
               key={item.title}
               variant={item.variant}
               className={`w-full ${
-                collapsed ? "px-3" : "px-4"
+                collapsed ? "px-3 justify-center" : "px-4 justify-start"
               } py-3 ${item.variant === "hero" ? "bg-gradient-hero text-primary-foreground hover:shadow-glow animate-glow-pulse" : "hover:bg-accent hover:text-accent-foreground"} transition-all duration-300`}
               onClick={item.action}
             >
-              <div className="flex items-center">
+              <div className={`flex items-center ${collapsed ? "justify-center" : ""}`}>
                 <item.icon className={`h-5 w-5 ${collapsed ? "" : "mr-3"}`} />
                 {!collapsed && <span className="font-medium">{item.title}</span>}
               </div>
